@@ -63,7 +63,7 @@ public class JDBC {
     public ArrayList<NTable> fetchalloted(int n,int t){
         ArrayList<NTable> arrayList=new ArrayList<>();
 
-        String sql="select * from nearurtable where status=? and seats>=? and timing<=?";
+        String sql="select * from nearurtable where status=? and seats>=? and timing !=?";
         try {
             pmt=con.prepareStatement(sql);
             pmt.setInt(1,1);
